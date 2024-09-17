@@ -43,14 +43,14 @@ CREATE TABLE IF NOT EXISTS companies (
 
 # Tabla transactions
 CREATE TABLE IF NOT EXISTS transactions (
-    id VARCHAR(55) PRIMARY KEY,
-    card_id CHAR(8),
-    business_id CHAR(6), 
+    id VARCHAR(100),
+    card_id VARCHAR(100),
+    business_id VARCHAR(100),
     timestamp TIMESTAMP,
-	amount DECIMAL(10, 2),
-    declined BOOLEAN,
-    product_ids INT,
-    user_id CHAR(3),
+    amount VARCHAR(100),
+    declined VARCHAR(100),
+    products_id VARCHAR(100),
+    user_id VARCHAR(100),
     lat FLOAT,
     longitude FLOAT,
     FOREIGN KEY (card_id) REFERENCES credit_cards(id),
