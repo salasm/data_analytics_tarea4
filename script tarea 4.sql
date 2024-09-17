@@ -124,9 +124,9 @@ ADD CONSTRAINT fk_product_ids
 FOREIGN KEY (product_ids) REFERENCES products(id);
 
 # número de veces que se ha vendido cada producto
-SELECT p.product_name, COUNT(t.product_ids) AS sales 
+SELECT p.id, p.product_name, COUNT(t.product_ids) AS sales 
 FROM transactions t
 JOIN products p ON p.id = t.product_ids
 WHERE declined = 0
-GROUP BY p.product_name
+GROUP BY p.id
 ORDER BY sales DESC;
