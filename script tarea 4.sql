@@ -49,7 +49,7 @@ CREATE TABLE IF NOT EXISTS transactions (
     timestamp TIMESTAMP,
     amount VARCHAR(100),
     declined VARCHAR(100),
-    products_id VARCHAR(100),
+    products_ids VARCHAR(100),
     user_id VARCHAR(100),
     lat FLOAT,
     longitude FLOAT,
