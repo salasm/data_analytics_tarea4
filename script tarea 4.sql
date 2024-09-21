@@ -89,7 +89,7 @@ CREATE TABLE IF NOT EXISTS transactions (
     timestamp TIMESTAMP,
     amount VARCHAR(100),
     declined VARCHAR(100),
-    products_ids VARCHAR(100),
+    product_ids VARCHAR(100),
     user_id VARCHAR(100),
     lat FLOAT,
     longitude FLOAT,
@@ -158,7 +158,7 @@ WHERE status = 'activated';
 # NIVEL 3
 # Ejercicio 1
 CREATE TABLE IF NOT EXISTS products (
-    id INT PRIMARY KEY,
+    id VARCHAR(100) PRIMARY KEY,
     product_name VARCHAR(50),
     price VARCHAR(20),
     colour CHAR(7),
