@@ -166,6 +166,13 @@ CREATE TABLE IF NOT EXISTS products (
     warehouse_id VARCHAR(10)
 );
 
+# Añadimos datos en products
+LOAD DATA INFILE "C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/products.csv"
+INTO TABLE products
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+IGNORE 1 ROWS;
+
 SELECT * 
 FROM products;
 
