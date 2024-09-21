@@ -176,7 +176,7 @@ SELECT *
 FROM products;
 
 
-#Crear un índice en las tabla de referencia si no existe
+#Crear un índice en la tabla de referencia si no existe
 ALTER TABLE transactions ADD INDEX (id);
 
 # Crear la tabla puente transaction_products
