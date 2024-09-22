@@ -116,7 +116,7 @@ SET FOREIGN_KEY_CHECKS = 1;
 SELECT name, surname
 FROM users
 WHERE id IN (
-	SELECT user_id
+    SELECT user_id
     FROM transactions
     GROUP BY user_id
     HAVING COUNT(id) > 30
@@ -133,7 +133,7 @@ GROUP BY cc.iban;
 #NIVEL 2
 #Ejercicio 1
 CREATE TABLE IF NOT EXISTS card_status (
-	card_id CHAR(8) PRIMARY KEY,
+    card_id CHAR(8) PRIMARY KEY,
     status VARCHAR(20),
     FOREIGN KEY (card_id) REFERENCES credit_cards(id)
 );
