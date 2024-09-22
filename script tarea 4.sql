@@ -98,7 +98,7 @@ CREATE TABLE IF NOT EXISTS transactions (
     FOREIGN KEY (user_id) REFERENCES users(id)
 );
 
--- Disable foreign key checks
+# deshabilitar restricción por clave foránea
 SET FOREIGN_KEY_CHECKS = 0;
 
 #carga de datos para credit_cards
@@ -108,7 +108,7 @@ FIELDS TERMINATED BY ';'
 ENCLOSED BY '"'
 IGNORE 1 ROWS;
 
--- Re-enable foreign key checks
+#rehabilitar restricción por clave foránea
 SET FOREIGN_KEY_CHECKS = 1;
 
 
