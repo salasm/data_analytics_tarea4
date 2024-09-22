@@ -187,7 +187,7 @@ CREATE TABLE IF NOT EXISTS transaction_products (
     FOREIGN KEY (product_id) REFERENCES products(id)
 );
 
-# Insertar los resultados descompuestos en la tabla transaction_product
+# Insertar product_ids separados en la tabla transaction_product
 INSERT INTO transaction_products (transaction_id, product_id)
 WITH RECURSIVE numbers AS (
     SELECT 1 AS n
